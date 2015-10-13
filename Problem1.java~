@@ -10,7 +10,7 @@ public class Problem1
         int b = 5;
         int range = 1000;
         
-        int sum = sumMultiplesInRange(a,range) + sumMultiplesInRange(b,range) - sumMultiplesInRange(a*b,range); // Subtract out double-counted numbers
+        int sum = sumMultiplesInRange(a,range) + sumMultiplesInRange(b,range) + sumMultiplesInRange(a*b,range); // Subtract out double-counted numbers
         
         System.out.println("The sum of all natural number multiples of "+a+" or "+b+" is "+sum);
     }

@@ -39,9 +39,9 @@ public class Problem4
     {
         int[] solution = {0,0,0}; // set up the solution as the triple (i*j, i, j)
         
-        for(int i=((int) Math.pow(10,n-1)); i<Math.pow(10,n); i++)
+        for(int i=((int) Math.pow(10,n)); i<Math.pow(10,n+1); i++)
         {
-            for(int j=((int) Math.pow(10,n-1)); j<=i; j++) // refrain from the redundant situation checking if i*j and j*i are palindromes
+            for(int j=((int) Math.pow(10,n)); j<=i; j++) // refrain from the redundant situation checking if i*j and j*i are palindromes
             {
                 if(checkPalindrome(i*j)&&(i*j)>solution[0]) // if this is a new largest solution, put it on the list
                 {

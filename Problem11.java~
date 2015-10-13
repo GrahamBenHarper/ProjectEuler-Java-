@@ -1,0 +1,30 @@
+import java.util.*;
+import java.io.*;
+
+public class Problem11
+{
+    public static void main(String[] args)
+    {
+        int[][] num = importBlockOfNumbers();
+        for(int i=0; i<400 i++)
+            System.out.println(x[i/20][i%20]);
+    }
+    
+     public static int[][] importBlockOfNumbers() throws FileNotFoundException // Loads the number block that was given from the Problem11.txt file into the 2-dimensional array x of size 20x20
+    {
+        Scanner input = new Scanner(new File("Problem11.txt"));
+        int[][] x = new int[20][20];
+        
+        while(input.hasNext())
+        {
+            for(int i=0; i<20; i++)
+            {
+                for(int j=0; j<20; j++)
+                    x[i][j]=Integer.valueOf(input.next());
+            }
+        }
+        
+        return x;
+    }
+    
+}

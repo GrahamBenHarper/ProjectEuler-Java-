@@ -25,7 +25,6 @@
 import java.util.*;
 import java.io.*;
 
-// This solution is not yet correct
 public class Problem8
 {
     public static void main(String[] args) throws FileNotFoundException
