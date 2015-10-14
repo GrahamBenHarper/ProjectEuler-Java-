@@ -32,7 +32,7 @@ public class Problem8
     {
         int[] num = importBigNumber();
         int n = 13;
-        int[] solution = findLargestNProductInNum(n,num);
+        long[] solution = findLargestNProductInNum(n,num);
         
         System.out.println("The largest product of "+n+" consecutive digits of the given 1000 digit number is "+solution[1]+" starting at row "+(solution[0]/50+1)+", column "+solution[0]%50+".");
     }
@@ -57,11 +57,11 @@ public class Problem8
         return x;
     }
     
-    public static int[] findLargestNProductInNum(int n, int[] num)
+    public static long[] findLargestNProductInNum(int n, int[] num)
     {
-        int maxStart = 0;
-        int maxProduct = 0;
-        int product = 0;
+        long maxStart = 0;
+        long maxProduct = 0;
+        long product = 0; // Using ints isn't good enough for this problem
         int j = 0;
         boolean findZero = false;
         
@@ -95,6 +95,6 @@ public class Problem8
                 }
             }
         }
-        return new int[] {maxStart,maxProduct};
+        return new long[] {maxStart,maxProduct};
     }
 }
